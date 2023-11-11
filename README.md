@@ -38,4 +38,41 @@ For this example, in the first step of the loop, the function keeps nesting unit
 
 After the loop in the level of current_loop = max_loop, the function returns to the level of current_loop = max_loop - 1, and so on.
 
-For a s
+For a simple example:
+
+```python
+    current_loop = 1
+    max_loop = 3
+    iterate_range = [4, 3, 2] 
+
+    result = iterate(current_loop, max_loop, iterate_range)
+```
+
+The output result is:
+```python
+    [0, 0, 0]
+    [0, 0, 1]
+    [0, 1, 0]
+    [0, 1, 1]
+    [0, 2, 0]
+    [0, 2, 1]
+    [1, 0, 0]
+    [1, 0, 1]
+    [1, 1, 0]
+    [1, 1, 1]
+    [1, 2, 0]
+    [1, 2, 1]
+    [2, 0, 0]
+    [2, 0, 1]
+    [2, 1, 0]
+    [2, 1, 1]
+    [2, 2, 0]
+    [2, 2, 1]
+    [3, 0, 0]
+    [3, 0, 1]
+    [3, 1, 0]
+    [3, 1, 1]
+    [3, 2, 0]
+    [3, 2, 1]
+```
+
