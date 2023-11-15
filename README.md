@@ -88,8 +88,14 @@ Usually we set `current_loop = 1` and `max_loop = N` to set a n-level recursion.
  `input_list` is a list of list, permutations and combination starts between the first level of the list, that means the elements in the second list. And there are three type of elements that are allowed in the second level of the list:
  
 - `None`: the element will be ignored in the permutations and combination.
-- `list`: it will 
+- `list`: it will expand in the permutations and combination. Though nothing special in the process above, there will be something different in the insertion process.
 - normal element: Nothing sepcial, just like me.
+
+`insert_list` is a list of list, and the elements in the second level of the list correspond to the elements in the second level of `input_list`, with the index of the first level of the `input_list` in the `insert_list`.
+
+- And here the `list` element in the input list differs, there will a local permutations and combination that exhaust all the possible combinations for the elements in the corresponding `list` element.
+
+`insert_index` is the index of the level of `input_list` where the `insert_list` will be inserted.
 
 
 
