@@ -1,0 +1,33 @@
+ Multiwfn -- A Multifunctional Wavefunction Analyzer
+ Version 3.8(dev), release date: 2023-Jun-4
+ Developer: Tian Lu (Beijing Kein Research Center for Natural Sciences)
+ Below paper ***MUST BE CITED*** if Multiwfn is utilized in your work:
+          Tian Lu, Feiwu Chen, J. Comput. Chem., 33, 580-592 (2012)
+ See "How to cite Multiwfn.pdf" in Multiwfn binary package for more information
+ Multiwfn official website: http://sobereva.com/multiwfn
+ Multiwfn English forum: http://sobereva.com/wfnbbs
+ Multiwfn Chinese forum: http://bbs.keinsci.com/wfn
+
+ ( Number of parallel threads:  24  Current date: 2023-11-16  Time: 19:40:04 )
+ 
+ Input file path, for example E:\NHK_ni_Youkoso!\Misaki_Nakahara.wfn
+ (Supported: .mwfn/wfn/wfx/fch/molden/31/chg/pdb/xyz/mol/mol2/cif/cub, etc.)
+ Hint: Press ENTER button directly can select file in a GUI window. To reload the file last time used, simply input the letter "o". Input such as ?miku.fch can open the miku.fch in the same folder as the file last time used.
+"Au8Pt5tddft.fch" cannot be found, input again
+"18" cannot be found, input again
+"1" cannot be found, input again
+"AU8PT5TDDFT.LOG" cannot be found, input again
+"15" cannot be found, input again
+"1" cannot be found, input again
+"3" cannot be found, input again
+"10" cannot be found, input again
+"1" cannot be found, input again
+"11" cannot be found, input again
+"1" cannot be found, input again
+"12" cannot be found, input again
+"2" cannot be found, input again
+"13" cannot be found, input again
+"14" cannot be found, input again
+"4" cannot be found, input again
+"15" cannot be found, input again
+"16" cannot be found, input again
