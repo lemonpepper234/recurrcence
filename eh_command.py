@@ -1,4 +1,4 @@
-import os,sys
+from tools import *
 
 #* the meaning of these files
 #todo learn more about it
@@ -10,21 +10,16 @@ import os,sys
  15 Output cube file of charge density difference to current folder
  16 Output cube file of Cele and Chole functions to current folder'''
 
-command_list = [18, 1, 'X', 'X', 1, 3, 'X', 'X']
+fch_filename = 'Au8Pt5tddft.fch'
+LOG_filename = 'AU8PT5TDDFT.LOG'
+excited_states_list = [13, 14, 15]
 
-subsitute_index = [index for index, element in enumerate(command_list) if element == 'X']
-subsitute_command = ['AU8PT5TDDFT.LOG', 
-                     [25, 14, 23, 9, 13, 7, 16], 
-                     [10, 11, 12, 13, 14, 15, 16],
-                     [1, 1, 2, None, [1, 2, 3, 4], None, None]]
+input_list = [[fch_filename], [18], [1], [LOG_filename], [excited_states_list], [1], [3], \
+    [10], [11], [12], [13], [14],[1], [14], [2], [14], [3], [14], [4], [15], [16]]
+insert_list = [1, 1, 2]
+insert_index = [7, 8, 9]
 
-assert len(subsitute_index) == len(subsitute_command), \
-    'The length of subsitute_index and subsitute_command are not equal you stupid idiot!'
 
-current_directory = os.getcwd()
-all_entries = os.listdir(current_directory)
-
-print (os.getcwd())
-
-print (len(subsitute_command))
-
+Multiwfn_input_list = iterate_list(1, len(input_list), input_list)
+Multiwfn_output_list = insert_into_input_list(Multiwfn_input_list, insert_index, insert_list)
+Multiwfn_exe("_excited_states", excited_states_list, Multiwfn_output_list)
