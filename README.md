@@ -76,27 +76,20 @@ The output result is:
 [3, 2, 1]
 ```
 
-## Usage of iterate_list_with_insert:
+## ~~Usage of iterate_list_with_insert:~~
 
-### Input parameters:
+## Usage of iterate_list and insert_into_input_list:
+
 ```python
-iterate_list_with_insert(current_loop, max_loop, input_list, insert_list, insert_index)
+Multiwfn_input_list = iterate_list(1, len(input_list), input_list)
+Multiwfn_output_list = insert_into_input_list(Multiwfn_input_list, insert_index, insert_list)
 ```
 
-Usually we set `current_loop = 1` and `max_loop = N` to set a n-level recursion.
+- `input_list`: two layer list, the permutation and cobiination happens in the elements in the second layer between different lists in the first layer.
 
- `input_list` is a list of list, permutations and combination starts between the first level of the list, that means the elements in the second list. And there are three type of elements that are allowed in the second level of the list:
- 
-- `None`: the element will be ignored in the permutations and combination.
-- `list`: it will expand in the permutations and combination. Though nothing special in the process above, there will be something different in the insertion process.
-- normal element: Nothing sepcial, just like me.
+- `insert_list`: one layer list, the list to be inserted into the input list. **Only one layer could be added while using `insert_into_input_list` fuction.**
 
-`insert_list` is a list of list, and the elements in the second level of the list correspond to the elements in the second level of `input_list`, with the index of the first level of the `input_list` in the `insert_list`.
-
-- And here the `list` element in the input list differs, there will a local permutations and combination that exhaust all the possible combinations for the elements in the corresponding `list` element.
-
-`insert_index` is the index of the level of `input_list` where the `insert_list` will be inserted.
-
+During the recurrsion proceed, the list elements in the second layer act the same as normal variables. However when using the `insert_into_input_list` fucntion, which the input list `insert_list` is a one layer list, beside with `insert_index`, the list elements in the modified list (`Multiwfn_input_list`) will exhaust all possible combinations with (if exist) the corresponding list element in the `insert_list`.
 
 
 
