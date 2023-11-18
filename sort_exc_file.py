@@ -25,12 +25,12 @@ def sorted_file(file_name):
     with open(file_name, 'r') as exc_file:
         lines = exc_file.readlines()
 
-    with open(f"sorted_{file_name}", 'w') as new_exc_file:
+    with open(f"{file_name.split('.')[0]}_sorted.{file_name.split('.')[1]}", 'w') as new_exc_file:
         for i in range(len(sorted_list)):
             new_exc_file.write(lines[sorted_list[i][1]])
             new_exc_file.write(lines[sorted_list[i][1] + 1])
 
     return None
 
-file_name = "AU9PT4+TDDFT_exc.txt"
+file_name = input("Please input the file name: ")
 sorted_file(file_name)
