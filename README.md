@@ -87,6 +87,8 @@ Multiwfn_output_list = insert_into_input_list(Multiwfn_input_list, insert_index,
 
 - `input_list`: two layer list, the permutation and cobiination happens in the elements in the second layer between different lists in the first layer.
 
+**each list elements in `input_list`** corresponds to one line of the input file for Multiwfn.
+
 - `insert_list`: one layer list, the list to be inserted into the input list. **Only one layer could be added while using `insert_into_input_list` fuction.**
 
 During the recurrsion proceed, the list elements in the second layer act the same as normal variables. However when using the `insert_into_input_list` fucntion, which the input list `insert_list` is a one layer list, beside with `insert_index`, the list elements in the modified list (`Multiwfn_input_list`) will exhaust all possible combinations with (if exist) the corresponding list element in the `insert_list`.
